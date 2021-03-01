@@ -11,12 +11,13 @@ int main()
             scanf("%d",&a[i][j]);
         }
     }
-    int max,min,lomax=0,lomin=0,sum;
-    max=(a[0][0]*4)+(a[0][1]*2)+(a[0][2]*1);
-    min=(a[0][0]*4)+(a[0][1]*2)+(a[0][2]*1);
-    for(int i=1;i<n;i++)
+    int max=0,min=2000,lomax=0,lomin=0,sum=0;
+    for(int i=0;i<n-3;i++)
     {
-        sum=(a[i][0]*4)+(a[i][1]*2)+(a[i][2]*1);
+        for(int j=i;j<i+3;j++)
+        {
+            sum+=(a[i][0]*4)+(a[i][1]*2)+(a[i][2]*1);
+        }
         if(max<sum)
         {
             max=sum;
@@ -28,5 +29,5 @@ int main()
             lomin=i;
         }
     }
-    printf("%d %d",lomax,lomin);
+    printf("%d %d",lomax+1,lomin+1);
 }
