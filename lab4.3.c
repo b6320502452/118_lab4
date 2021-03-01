@@ -7,11 +7,7 @@ int main()
     int j=0;
     for(int i=0;i<strlen(text);i++)
     {
-        if(text[i]==text[i+1])
-        {
-            continue;
-        }
-        else
+        if(text[i]!=text[i+1])
         {
             edit[j]=text[i];
             j++;
