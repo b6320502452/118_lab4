@@ -2,12 +2,20 @@
 int main()
 {
     char text[201];
+    char edit[201]="";
     gets(text);
-    for(int i=0;i<sizeof text;i++)
+    int j=0;
+    for(int i=0;i<strlen(text);i++)
     {
-        while(text[i]==text[i+1])
+        if(text[i]==text[i+1])
         {
-
+            continue;
+        }
+        else
+        {
+            edit[j]=text[i];
+            j++;
         }
     }
+    puts(edit);
 }
